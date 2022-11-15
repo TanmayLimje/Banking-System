@@ -5,13 +5,13 @@ import java.time.Period;
 
 public class Bank_database {
 
-    private Account account ;
-    
-    public Bank_database(Account account)
+    private Account_Info account ;
+
+    public Bank_database(Account_Info account)
     {
         this.account= account;
     }
-    
+
 
     public void deposit(double d)
     {
@@ -34,6 +34,11 @@ public class Bank_database {
         }
     }
 
+    public void get_balance()
+    {
+        account.get_balance();
+    }
+
     public void get_info()
     {
         account.display();
@@ -54,4 +59,7 @@ public class Bank_database {
 
     }
 
+    public void setAccount(Account_Info account) {
+        this.account = account;
+    }
 }
